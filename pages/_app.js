@@ -1,5 +1,6 @@
 import '@picocss/pico'
 import '../styles/globals.css'
+import { Link } from 'next/link'
 
 function MyApp({ Component, pageProps }) {
   return <div>
@@ -10,8 +11,16 @@ function MyApp({ Component, pageProps }) {
         </li>
       </ul>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
+        <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            <a>About Us</a>
+          </Link>
+        </li>
       </ul>
     </nav>
     <main className="container">
