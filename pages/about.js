@@ -17,7 +17,7 @@ export default function About() {
           This app shows how to:
         </p>
         <ul>
-          <li>Authenticate a user on the Flow blockchain.</li>
+          <li>Authenticate a user on the Flow blockchain.</li> 
           <li>Import a contract to let a user create a profile and query the blockchain for their data.</li>
           <li>Let a user modify their profile and mutate the blockchain to save changes.</li>
         </ul>
