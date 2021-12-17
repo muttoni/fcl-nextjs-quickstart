@@ -6,7 +6,7 @@ export default function About() {
       <Head>
         <title>About</title>
       </Head>
-      <div class="container">
+      <div className="container">
         <h1>About this app</h1>
 
         <p>
