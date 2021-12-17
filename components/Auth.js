@@ -127,39 +127,6 @@ function App() {
     )
   }
 
-  const ProfileComponent = () => {
-    return (
-      <div>
-        <article className="card">
-
-          <label htmlFor="address">
-            Address
-            <input type="text" id="address" name="address" defaultValue={profile.address} placeholder="Address" disabled />
-          </label>
-          <div className="grid">
-
-            <label htmlFor="name">
-              Name
-              <input type="text" id="name" name="name" placeholder="Name" defaultValue={profile.name} onChange={(e) => setProfile({ ...profile, name: e.target.value })} autoFocus />
-            </label>
-
-            <label htmlFor="color">
-              Favorite Color
-              <input type="color" id="color" name="color" defaultValue={profile.color} onChange={(e) => setProfile({ ...profile, color: e.target.value })} autoFocus/>
-            </label>
-
-          </div>
-
-          <label htmlFor="info">Bio</label>
-          <textarea type="info" id="info" name="info" placeholder="Your personal info" defaultValue={profile.info} onChange={(e) => setProfile({ ...profile, info: e.target.value })} autoFocus></textarea>
-
-          <button onClick={executeTransaction}>Update Profile</button>
-
-        </article>
-      </div>
-    )
-  }
-
   const WelcomeText = (props) => {
     return (<div>
       <h1>
@@ -167,7 +134,7 @@ function App() {
       </h1>
 
       <p>
-        { props.loggedIn 
+        {props.loggedIn
           ? "Create a profile (or load it if you already created it)"
           : "Get started by logging in or signing up."
         }
@@ -179,14 +146,39 @@ function App() {
 
   return (
     <div>
-      {transactionInProgress 
+      {transactionInProgress
         ? <Transaction transactionStatus={transactionStatus} txId={txId} />
         : <span></span>
       }
       <div className="grid">
         <div>
           {profile
-            ? <ProfileComponent />
+            ? <article className="card">
+
+              <label htmlFor="address">
+                Address
+                <input type="text" id="address" name="address" defaultValue={profile.address} placeholder="Address" disabled />
+              </label>
+              <div className="grid">
+
+                <label htmlFor="name">
+                  Name
+                  <input type="text" id="name" name="name" placeholder="Name" defaultValue={profile.name} onChange={(e) => setProfile({ ...profile, name: e.target.value })} />
+                </label>
+
+                <label htmlFor="color">
+                  Favorite Color
+                  <input type="color" id="color" name="color" defaultValue={profile.color} onChange={(e) => setProfile({ ...profile, color: e.target.value })} />
+                </label>
+
+              </div>
+
+              <label htmlFor="info">Bio</label>
+              <textarea type="info" id="info" name="info" placeholder="Your personal info" defaultValue={profile.info} onChange={(e) => setProfile({ ...profile, info: e.target.value })} ></textarea>
+
+              <button onClick={executeTransaction}>Update Profile</button>
+
+            </article>
             : <WelcomeText loggedIn={user?.loggedIn} />
           }
         </div>
