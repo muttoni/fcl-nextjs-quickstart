@@ -140,18 +140,18 @@ function App() {
 
             <label htmlFor="name">
               Name
-              <input type="text" id="name" name="name" placeholder="Name" defaultValue={profile.name} onChange={(e) => setProfile({ ...profile, name: e.target.value })} />
+              <input type="text" id="name" name="name" placeholder="Name" defaultValue={profile.name} onChange={(e) => setProfile({ ...profile, name: e.target.value })} autoFocus />
             </label>
 
             <label htmlFor="color">
               Favorite Color
-              <input type="color" id="color" name="color" defaultValue={profile.color} onChange={(e) => setProfile({ ...profile, color: e.target.value })} />
+              <input type="color" id="color" name="color" defaultValue={profile.color} onChange={(e) => setProfile({ ...profile, color: e.target.value })} autoFocus/>
             </label>
 
           </div>
 
           <label htmlFor="info">Bio</label>
-          <textarea type="info" id="info" name="info" placeholder="Your personal info" defaultValue={profile.info} onChange={(e) => setProfile({ ...profile, info: e.target.value })}></textarea>
+          <textarea type="info" id="info" name="info" placeholder="Your personal info" defaultValue={profile.info} onChange={(e) => setProfile({ ...profile, info: e.target.value })} autoFocus></textarea>
 
           <button onClick={executeTransaction}>Update Profile</button>
 
@@ -160,14 +160,18 @@ function App() {
     )
   }
 
-  const WelcomeText = () => {
+  const WelcomeText = (props) => {
     return (<div>
       <h1>
         Welcome to <a href="https://docs.onflow.org">Web3</a>
       </h1>
 
       <p>
-        Get started by logging in or signing up.
+        { props.loggedIn 
+          ? "Create a profile (or load it if you already created it)"
+          : "Get started by logging in or signing up."
+        }
+
       </p>
 
     </div>)
@@ -175,15 +179,15 @@ function App() {
 
   return (
     <div>
-      {transactionInProgress ?
-        <Transaction transactionStatus={transactionStatus} txId={txId} />
+      {transactionInProgress 
+        ? <Transaction transactionStatus={transactionStatus} txId={txId} />
         : <span></span>
       }
       <div className="grid">
         <div>
           {profile
             ? <ProfileComponent />
-            : <WelcomeText />
+            : <WelcomeText loggedIn={user?.loggedIn} />
           }
         </div>
         <div>
@@ -192,7 +196,6 @@ function App() {
             : <UnauthenticatedState />
           }
         </div>
-
       </div>
     </div>
   )
