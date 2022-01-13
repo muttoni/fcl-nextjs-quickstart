@@ -15,6 +15,9 @@ Once you've created a project and installed dependencies with `npm install` (or 
 
 ```bash
 npm run dev
+flow project start-emulator ./flow.json --dev-wallet
+flow accounts add-contract Profile ./cadence/contracts/Profile.cdc
+
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
