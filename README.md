@@ -28,6 +28,8 @@ npm run dev
 npm run dev -- --open
 ```
 
+> NOTE: If you are switching between testnet and the emulator without changing tabs, FCL will keep you logged in with your testnet address (or vice-versa). Remember to logout inbetween environments to avoid runtime errors!
+
 ## Building
 
 Before creating a production version of your app, build it!
