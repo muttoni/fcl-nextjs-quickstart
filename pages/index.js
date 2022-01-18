@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import Auth from '../components/Auth'
+import Head from "next/head";
+import Landing from "../components/Landing";
+import Transaction from "../components/Transaction";
 
 export default function Home() {
   return (
@@ -11,11 +12,11 @@ export default function Home() {
       </Head>
 
       <main>
+        <Transaction />
         <div className="grid">
-          <Auth />
+          <Landing />
         </div>
       </main>
-
     </div>
-  )
+  );
 }
