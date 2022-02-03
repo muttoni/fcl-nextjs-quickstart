@@ -17,6 +17,8 @@ npm run start
 
 ## Developing with Flow emulator
 
+**Pre-Requisite**: To develop locally, make sure you have the Flow CLI installed: https://docs.onflow.org/flow-cli/install/
+
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start the emulator, deploy the contracts, followed by the development server:
 
 ```bash
