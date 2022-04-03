@@ -39,3 +39,7 @@ Before creating a production version of your app, build it!
 ```bash
 npm run build
 ```
+
+## Testimonials
+
+<img width="343" alt="Screenshot 2022-04-03 at 12 12 20" src="https://user-images.githubusercontent.com/27052451/161422572-007a3740-8272-4e8b-95da-2ec1d5f192d3.png">
