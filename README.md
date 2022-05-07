@@ -20,7 +20,7 @@ npm run start
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start the emulator, deploy the contracts, followed by the development server:
 
 ```bash
-flow emulator start --dev-wallet
+flow emulator start
 flow project deploy --network emulator
 
 npm run dev
