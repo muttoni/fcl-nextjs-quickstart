@@ -21,6 +21,7 @@ Once you've created a project and installed dependencies with `npm install` (or 
 
 ```bash
 flow emulator start
+flow dev-wallet
 flow project deploy --network emulator
 
 npm run dev
