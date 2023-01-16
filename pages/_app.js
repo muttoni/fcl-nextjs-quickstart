@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
       </main>
       <footer className="container">
         <p>
-          visit <Link href="https://docs.onflow.org">docs.onflow.org</Link> to learn
+          visit <Link href="https://developers.flow.com">developers.flow.com</Link> to learn
           more.
         </p>
         <p>
