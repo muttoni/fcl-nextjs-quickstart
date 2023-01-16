@@ -13,14 +13,10 @@ function MyApp({ Component, pageProps }) {
         </ul>
         <ul>
           <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
+            <Link href="/about">About</Link>
           </li>
         </ul>
       </nav>
@@ -33,11 +29,11 @@ function MyApp({ Component, pageProps }) {
       </main>
       <footer className="container">
         <p>
-          visit <a href="https://docs.onflow.org">docs.onflow.org</a> to learn
+          visit <Link href="https://docs.onflow.org">docs.onflow.org</Link> to learn
           more.
         </p>
         <p>
-          <a href="https://github.com/muttoni/fcl-nextjs-quickstart">
+          <Link href="https://github.com/muttoni/fcl-nextjs-quickstart" passHref>
             <svg
               width="32"
               height="32"
@@ -53,7 +49,7 @@ function MyApp({ Component, pageProps }) {
                 fill="currentColor"
               />
             </svg>
-          </a>
+          </Link>
         </p>
       </footer>
     </div>

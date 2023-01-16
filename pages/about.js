@@ -9,7 +9,7 @@ export default function About() {
       <div className="container">
         <h1>About this app</h1>
         <p>
-          This is a <a href="https://docs.onflow.org/fcl">FCL-powered</a> app built on <a href="http://onflow.org">Flow</a>.
+          This is a <a href="https://developers.flow.com/fcl">FCL-powered</a> app built on <a href="https://developers.flow.com">Flow</a>.
         </p>
         <p>
           This app shows how to:

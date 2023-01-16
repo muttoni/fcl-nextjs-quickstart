@@ -1,6 +1,7 @@
 import "../flow/config";
 import { useAuth } from "../contexts/AuthContext";
 import Profile from "./Profile";
+import Link from 'next/link';
 
 function Landing() {
   const { currentUser, profileExists, logOut, logIn, signUp, createProfile } =
@@ -44,7 +45,7 @@ function Landing() {
       <div className="grid">
         <div>
           <h1>
-            Welcome to <a href="https://docs.onflow.org">Web3</a>
+            Welcome to <Link href="https://docs.onflow.org">Web3</Link>
           </h1>
           <p>
             <Messages />
